@@ -19,21 +19,22 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 public class LiveCameraFeedSenderActivity extends Activity {
-  private static final String TAG = "CameraDemo";
-  Preview preview; 
-  
+    private static final String TAG = "CameraDemo";
+    Preview preview;
 
-  /** Called when the activity is first created. */
-  
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.main);
-try{
-        	
+    /**
+     * Called when the activity is first created.
+     */
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        try {
+
+        } catch (Exception e) {
+        }
+
+        preview = new Preview(this);
+        ((FrameLayout) findViewById(R.id.preview)).addView(preview);
+    }
 }
-
-catch(Exception e){}
-    
-    preview = new Preview(this); 
-    ((FrameLayout) findViewById(R.id.preview)).addView(preview); 
-    }}
